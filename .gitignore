@@ -22,3 +22,9 @@
 /tests/UnitTests/obj/Release/net7.0
 /tests/UnitTests/bin/Release/net7.0
 /.sonarqube
+/src/Application/bin/Debug/net8.0
+/src/API/bin/Debug/net8.0
+/src/Domain/bin/Debug/net8.0
+/src/Infra/bin/Debug/net8.0
+/tests/UnitTests/bin/Debug/net8.0
+/tests/UnitTests/obj/Debug/net8.0
