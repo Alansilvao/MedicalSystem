@@ -15,6 +15,7 @@ public class AppointmentUseCasesTests
         _emailServiceMock = new Mock<IEmailService>();
     }
 
+
     [Fact]
     public async Task CreateAppointmentUseCase_Should_Create_Appointment_And_Send_Email()
     {
