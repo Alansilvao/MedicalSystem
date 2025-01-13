@@ -1,0 +1,19 @@
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (66ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit)
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
