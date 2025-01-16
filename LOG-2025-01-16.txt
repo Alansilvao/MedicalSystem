@@ -1,0 +1,919 @@
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (159ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = Boolean), @p2='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Patients] ([Email], [IsDeleted], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (89ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Doctors] ([Name], [Specialty])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit)
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (67ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (123ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (64ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (117ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Boolean), @p2='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Patients] SET [Email] = @p0, [IsDeleted] = @p1, [Name] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (210ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (63ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (83ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (71ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Doctors] SET [Name] = @p0, [Specialty] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (148ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (115ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (100ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (81ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Doctors]
+OUTPUT 1
+WHERE [Id] = @p0;
+Error: Microsoft.EntityFrameworkCore.Update.SaveChangesFailed - An exception occurred in the database while saving changes for context type 'Infra.Database.Context.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): A instrução DELETE conflitou com a restrição do REFERENCE "FK_Appointments_Doctors". O conflito ocorreu no banco de dados "MedicalSystem", tabela "dbo.Appointments", column 'DoctorId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:2aca1d41-a010-4e6a-bc69-c17c5489d972
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (107ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (26ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Doctors]
+OUTPUT 1
+WHERE [Id] = @p0;
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (200ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = Boolean), @p2='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Patients] ([Email], [IsDeleted], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (187ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit)
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (198ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (234ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (34ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Boolean), @p2='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Patients] SET [Email] = @p0, [IsDeleted] = @p1, [Name] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (109ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (76ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit)
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (161ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (44ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Boolean), @p2='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Patients] SET [Email] = @p0, [IsDeleted] = @p1, [Name] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (201ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit)
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (145ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (22ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Doctors] ([Name], [Specialty])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (187ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (53ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (76ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Doctors] SET [Name] = @p0, [Specialty] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (186ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (43ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (37ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (25ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (29ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit)
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (19ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = Boolean), @p2='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Patients] ([Email], [IsDeleted], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit)
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (3ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Boolean), @p2='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Patients] SET [Email] = @p0, [IsDeleted] = @p1, [Name] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Boolean), @p2='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Patients] SET [Email] = @p0, [IsDeleted] = @p1, [Name] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit)
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Doctors] ([Name], [Specialty])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (3ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Doctors] SET [Name] = @p0, [Specialty] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (5ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (27ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (5ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (537ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (111ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (41ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (98ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (142ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (53ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (37ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (193ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (20ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (120ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (168ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (24ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (46ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (22ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (27ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (18ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (24ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (80ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (21ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (50ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (153ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (61ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (24ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (42ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (89ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (63ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (25ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (17ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (165ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (52ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (67ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (81ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (155ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (55ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (56ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (82ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (41ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (129ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (46ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (45ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (42ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (161ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (77ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (65ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (54ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (167ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (36ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (51ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (21ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (171ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (64ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (77ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (39ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (180ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (27ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (36ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (147ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (62ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (82ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (58ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (139ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (41ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (51ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (146ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (41ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (40ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (59ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (152ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (41ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (14ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (143ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (65ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (55ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (47ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Information: ListeningOnAddress - Now listening on: https://localhost:7176
+Information: ListeningOnAddress - Now listening on: http://localhost:5055
+Information: 0 - Application started. Press Ctrl+C to shut down.
+Information: 0 - Hosting environment: Development
+Information: 0 - Content root path: C:\repositorio\MedicalSystem\src\API
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (97ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit)
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (108ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (DbType = Boolean), @p2='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Patients] ([Email], [IsDeleted], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (167ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit)
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (68ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (163ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Boolean), @p2='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Patients] SET [Email] = @p0, [IsDeleted] = @p1, [Name] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (152ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (17ms) [Parameters=[@p3='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (DbType = Boolean), @p2='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Patients] SET [Email] = @p0, [IsDeleted] = @p1, [Name] = @p2
+OUTPUT 1
+WHERE [Id] = @p3;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (72ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[IsDeleted] = CAST(0 AS bit)
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (94ms) [Parameters=[@p0='?' (Size = 100), @p1='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Doctors] ([Name], [Specialty])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (145ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (15ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 100), @p1='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Doctors] SET [Name] = @p0, [Specialty] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (44ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (167ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (76ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (66ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (66ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (87ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (131ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[Email], [p].[IsDeleted], [p].[Name]
+FROM [Patients] AS [p]
+WHERE [p].[IsDeleted] = CAST(0 AS bit) AND [p].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (51ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [d].[Specialty]
+FROM [Doctors] AS [d]
+WHERE [d].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (164ms) [Parameters=[@__doctorId_0='?' (DbType = Int32), @__AddHours_1='?' (DbType = DateTime2), @__AddHours_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit) AND [a].[DoctorId] = @__doctorId_0 AND [a].[Date] >= @__AddHours_1 AND [a].[Date] <= @__AddHours_2
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (128ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Appointments] ([Date], [DoctorId], [IsCanceled], [PatientId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[IsCanceled] = CAST(0 AS bit)
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (101ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[Date], [a].[DoctorId], [a].[IsCanceled], [a].[PatientId]
+FROM [Appointments] AS [a]
+WHERE [a].[IsCanceled] = CAST(0 AS bit) AND [a].[Id] = @__p_0
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (113ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Appointments] SET [Date] = @p0, [DoctorId] = @p1, [IsCanceled] = @p2, [PatientId] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+Error: Microsoft.EntityFrameworkCore.Update.SaveChangesFailed - An exception occurred in the database while saving changes for context type 'Infra.Database.Context.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): A instrução UPDATE conflitou com a restrição do FOREIGN KEY "FK_Appointments_Doctors". O conflito ocorreu no banco de dados "MedicalSystem", tabela "dbo.Doctors", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:62c8fbb6-1b73-4cad-a0d1-8f0b905c1ee1
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Error: UnhandledException - An unhandled exception has occurred while executing the request.

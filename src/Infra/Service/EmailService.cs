@@ -3,6 +3,7 @@ using System.Net.Mail;
 using System.Net;
 using Domain.Entities.newEntities;
 using Application.Interfaces.Service;
+using System.Security.Authentication;
 
 namespace Infrastructure.Services
 {
@@ -21,6 +22,8 @@ namespace Infrastructure.Services
             {
                 client.Credentials = new NetworkCredential(_configuration["Smtp:Username"], _configuration["Smtp:Password"]);
                 client.EnableSsl = true;
+               // client.TargetName = "STARTTLS";
+                //client.SslProtocols = SslProtocols.Tls12;
 
                 var mailMessage = new MailMessage
                 {
@@ -29,7 +32,7 @@ namespace Infrastructure.Services
                     Body = body,
                     IsBodyHtml = true
                 };
-                mailMessage.To.Add("to");
+                mailMessage.To.Add(to);
 
 
                 await client.SendMailAsync(mailMessage);

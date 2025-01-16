@@ -1,4 +1,4 @@
-USE INVESTIMENTO
+USE MedicalSystem
 
 GO
 
